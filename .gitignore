@@ -1,0 +1,59 @@
+# Unity
+unity-vr/[Ll]ibrary/
+unity-vr/[Tt]emp/
+unity-vr/[Oo]bj/
+unity-vr/[Bb]uild/
+unity-vr/[Bb]uilds/
+unity-vr/[Ll]ogs/
+unity-vr/[Uu]ser[Ss]ettings/
+
+# Unity auto-generated
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity crash logs
+sysinfo.txt
+*.stackdump
+
+# Python
+ml/**/__pycache__/
+ml/**/*.pyc
+ml/**/*.pyo
+ml/**/*.pyd
+ml/.Python
+ml/venv/
+ml/env/
+ml/.venv
+ml/**/.ipynb_checkpoints
+
+# ML Models (track via LFS or manually if needed)
+*.h5
+*.pkl
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
