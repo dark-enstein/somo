@@ -59,3 +59,10 @@ Thumbs.db
 *~
 
 COMPLETION.md
+\#/*
+3.10/*
+ml/models/confusion*
+recreate/*
+with/*
+venv/*
+.python-version
