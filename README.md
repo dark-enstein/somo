@@ -77,17 +77,17 @@ pip install mediapipe numpy scikit-learn onnx
 # Open unity-vr/ folder as Unity project
 ```
 
-### Running the Recorder (Day 2+)
+### Running the Recorder
 ```bash
 python ml/scripts/record_gestures.py --gesture open_hand --samples 200
 ```
 
-### Training the Model (Day 3+)
+### Training the Model
 ```bash
 python ml/scripts/train_classifier.py --output ml/models/gesture_classifier.onnx
 ```
 
-### Unity VR Scene (Day 4+)
+### Unity VR Scene
 1. Open `unity-vr/` in Unity Hub
 2. Load `Assets/Scenes/MainScene.unity`
 3. Enter Play mode (requires VR headset or simulator)
@@ -107,11 +107,3 @@ python ml/scripts/train_classifier.py --output ml/models/gesture_classifier.onnx
 ## License
 
 MIT License - see LICENSE file for details.
-
----
-
-## Contributors
-
-Built with incremental commits and modular architecture for educational and demonstration purposes.
-
----
