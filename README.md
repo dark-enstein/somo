@@ -35,9 +35,8 @@ somo/
 │   └── scripts/           # Feature extraction, training
 │
 └── docs/                  # Documentation
-    ├── tracking-stack-decision.md
-    ├── feature-extraction-spec.md
-    └── ... (day-by-day implementation notes)
+    ├── ml
+    └── unity-vr (in-progress)
 ```
 
 ---
@@ -51,52 +50,6 @@ somo/
 | **Model Export** | ONNX (for Unity Barracuda inference) |
 | **VR Engine** | Unity 2022.3 LTS + XR Interaction Toolkit |
 | **Runtime Inference** | Unity Barracuda (ONNX runtime) |
-
----
-
-## 7-Day Implementation Plan
-
-### ✅ Day 1 — Setup & Architecture
-- [x] Choose tracking stack (MediaPipe)
-- [x] Define folder structure
-- [x] Write feature extraction math spec
-- [x] Unity XR project scaffolding
-
-### ✅ Day 2 — Data Capture
-- [x] Build gesture recorder (Python + MediaPipe)
-- [x] Implement feature extractor (31 features)
-- [x] Create dataset merge utility
-- [x] Document data collection protocol
-
-### ✅ Day 3 — Feature Engineering & ML Model
-- [x] Generate synthetic training data
-- [x] Train kNN / Random Forest classifier
-- [x] Evaluate with confusion matrix
-- [x] Export model to ONNX
-- [x] Create end-to-end pipeline script
-
-### ✅ Day 4 — Unity Runtime Integration
-- [x] Re-implement feature extraction in C#
-- [x] Load ONNX model via Barracuda
-- [x] Add smoothing (majority vote + dwell time)
-- [x] Debug overlay: predicted gesture + confidence
-- [x] Hand landmark visualizer
-
-### ✅ Day 5 — Interaction Mechanics
-- [x] Radial menu toggle (open hand)
-- [x] Pinch → grab/release cube
-- [x] Wrist roll → rotate cube
-- [x] Two-hand pinch distance → scale cube
-- [x] Thumbs-up → confirm selection
-- [x] Physics-based throwing
-
-### ✅ Day 6 & 7 — Documentation & Delivery
-- [x] Complete documentation (all days)
-- [x] Testing guides and troubleshooting
-- [x] Script API references
-- [x] Integration examples
-
----
 
 ## Gesture Classes
 
@@ -138,15 +91,6 @@ python ml/scripts/train_classifier.py --output ml/models/gesture_classifier.onnx
 1. Open `unity-vr/` in Unity Hub
 2. Load `Assets/Scenes/MainScene.unity`
 3. Enter Play mode (requires VR headset or simulator)
-
----
-
-## Performance Targets
-
-- **Inference Latency**: < 50ms (Unity runtime)
-- **Accuracy**: > 90% on test set
-- **Frame Rate**: 30+ FPS (VR rendering + gesture classification)
-- **False Positive Rate**: < 5% (robust to hand movements)
 
 ---
 
